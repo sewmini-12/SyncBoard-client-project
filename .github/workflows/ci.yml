@@ -1,0 +1,36 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main, sewmini ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-server:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install server dependencies
+        run: npm install
+        working-directory: server
+      - name: Run server tests
+        run: npm test
+        working-directory: server
+
+  test-client:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install client dependencies
+        run: npm install
+        working-directory: syncboard-client
+      - name: Run client tests
+        run: npm test -- --watchAll=false --passWithNoTests
+        working-directory: syncboard-client

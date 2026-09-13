@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  mongodb:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build: ./server
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/collabboard
+      - JWT_SECRET=your_super_secret_key_here
+
+  frontend:
+    build: ./syncboard-client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  mongo_data:
