@@ -41,4 +41,4 @@ test('has logout button on board page', () => {
   fireEvent.click(loginButton);
   const logoutButton = screen.getByRole('button', { name: /Logout/i });
   expect(logoutButton).toBeInTheDocument();
-});w
+});

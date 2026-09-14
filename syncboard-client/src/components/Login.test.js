@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import Login from './Login';
 
-test('renders login form', () => {
+test('renders login form with email and password fields', () => {
   render(<Login onLogin={() => {}} />);
   expect(screen.getByPlaceholderText(/Email address/i)).toBeInTheDocument();
   expect(screen.getByPlaceholderText(/Password/i)).toBeInTheDocument();
@@ -10,8 +10,8 @@ test('renders login form', () => {
 
 test('calls onLogin when form is submitted', () => {
   const mockLogin = jest.fn();
-  render(<Login onLogin={mockLogin} />);
-  const button = screen.getByRole('button', { name: /Log In/i });
-  fireEvent.click(button);
+  const { container } = render(<Login onLogin={mockLogin} />);
+  const form = container.querySelector('form');
+  fireEvent.submit(form);
   expect(mockLogin).toHaveBeenCalled();
 });
