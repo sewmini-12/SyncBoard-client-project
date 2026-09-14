@@ -9,18 +9,19 @@ on:
 jobs:
   test-server:
     runs-on: ubuntu-latest
-    
+    timeout-minutes: 10
+
     services:
       mongodb:
         image: mongo:6
         ports:
           - 27017:27017
-    
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
       - name: Install server dependencies
         run: npm install
         working-directory: server
@@ -34,14 +35,17 @@ jobs:
 
   test-client:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
       - name: Install client dependencies
         run: npm install --legacy-peer-deps
         working-directory: syncboard-client
       - name: Run client tests
-        run: CI=true npm test -- --watchAll=false --passWithNoTests
+        run: npm test
         working-directory: syncboard-client
+        env:
+          CI: true
