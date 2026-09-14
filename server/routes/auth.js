@@ -1,6 +1,6 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
-const User = require('../models/user');
+const User = require('../models/User');
 const router = express.Router();
 
 // Make sure JWT_SECRET is set in your .env file
