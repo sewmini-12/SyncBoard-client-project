@@ -1,0 +1,360 @@
+body.dark-mode {
+  background: #0f0f1a !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .App {
+  background: #0f0f1a !important;
+}
+
+/* Board Container */
+body.dark-mode .board-container {
+  background: #0f0f1a !important;
+}
+
+/* Board Header */
+body.dark-mode .board-header h1 {
+  color: #ffffff !important;
+}
+
+body.dark-mode .board-header h1 {
+    /* ... other styles ... */
+    background: linear-gradient(135deg, var(--primary), var(--secondary)); /* if gradient is here */
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;   /* add this line */
+}
+
+body.dark-mode .board-header {
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Columns */
+body.dark-mode .column {
+  background: #1a1a2e !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark-mode .column-header h3 {
+  color: #ffffff !important;
+}
+
+body.dark-mode .task-count {
+  background: #2a2a4a !important;
+  color: #a0a0c0 !important;
+}
+
+/* Task Cards */
+body.dark-mode .task-card {
+  background: #16213e !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .task-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
+  border-color: rgba(102, 126, 234, 0.3) !important;
+}
+
+body.dark-mode .task-card h4 {
+  color: #ffffff !important;
+}
+
+body.dark-mode .task-description {
+  color: #a0a0c0 !important;
+}
+
+body.dark-mode .assignee {
+  color: #a0a0c0 !important;
+}
+
+/* Inputs */
+body.dark-mode .task-input input {
+  background: #1a1a2e !important;
+  border-color: #2a2a4a !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .task-input input:focus {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15) !important;
+}
+
+body.dark-mode .task-input input::placeholder {
+  color: #666 !important;
+}
+
+/* Search & Filter */
+body.dark-mode .search-filter input,
+body.dark-mode .search-filter select {
+  background: #1a1a2e !important;
+  border-color: #2a2a4a !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .search-filter input::placeholder {
+  color: #666 !important;
+}
+
+body.dark-mode .search-filter input:focus,
+body.dark-mode .search-filter select:focus {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1) !important;
+}
+
+/* Activity Log */
+body.dark-mode .activity-log {
+  background: #1a1a2e !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+body.dark-mode .activity-log h4 {
+  color: #ffffff !important;
+}
+
+body.dark-mode .activity-item {
+  border-bottom-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+body.dark-mode .activity-message {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .activity-time {
+  color: #888 !important;
+}
+
+body.dark-mode .no-activity {
+  color: #666 !important;
+}
+
+/* Theme Button */
+body.dark-mode .theme-toggle {
+  background: #2a2a4a !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .theme-toggle:hover {
+  background: #3a3a5a !important;
+}
+
+/* Empty State */
+body.dark-mode .empty-column {
+  background: #16213e !important;
+  color: #666 !important;
+}
+
+/* Loading */
+body.dark-mode .loading-spinner-container p {
+  color: #a0a0c0 !important;
+}
+
+/* Edit Mode */
+body.dark-mode .task-card.editing {
+  background: #1a2a4a !important;
+  border-color: #667eea !important;
+}
+
+body.dark-mode .edit-input {
+  background: #1a1a2e !important;
+  border-color: #2a2a4a !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .edit-input:focus {
+  border-color: #667eea !important;
+}
+
+body.dark-mode .edit-select {
+  background: #1a1a2e !important;
+  border-color: #2a2a4a !important;
+  color: #e0e0e0 !important;
+}
+
+/* Logout Button */
+body.dark-mode .logout-btn {
+  background: #e03a4a !important;
+}
+
+body.dark-mode .logout-btn:hover {
+  background: #c03242 !important;
+}
+
+/* Success Message */
+body.dark-mode .success-message {
+  background: #1a3a2a !important;
+  color: #2ed573 !important;
+}
+
+/* Scrollbar */
+body.dark-mode .activity-log::-webkit-scrollbar-track {
+  background: #1a1a2e !important;
+}
+
+body.dark-mode .activity-log::-webkit-scrollbar-thumb {
+  background: #2a2a4a !important;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #667eea;
+  --primary-dark: #5a6fd6;
+  --primary-light: #8b9cf7;
+  --secondary: #764ba2;
+  --success: #2ed573;
+  --warning: #ffa502;
+  --danger: #ff4757;
+  --dark: #2d3436;
+  --gray: #636e72;
+  --light-gray: #dfe6e9;
+  --bg: #f5f6fa;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --card-hover-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+  --radius: 12px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.App {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* ===== Login Page ===== */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 50px 45px;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  max-width: 90%;
+  animation: slideUp 0.6s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.login-box h1 {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;          /* ← add this line */
+  margin-bottom: 6px;
+}
+
+.login-box .subtitle {
+  text-align: center;
+  color: var(--gray);
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 14px 16px;
+  margin: 8px 0;
+  border: 2px solid var(--light-gray);
+  border-radius: var(--radius);
+  font-size: 15px;
+  transition: var(--transition);
+  background: #f8f9fa;
+}
+
+.login-box input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+  background: white;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 12px;
+}
+
+.login-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.login-box .demo-note {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 13px;
+  color: #aaa;
+
+  .error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  border-left: 4px solid #c62828;
+}
+
+.toggle-auth {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #777;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 6px;
+  padding: 0;
+}
+
+.toggle-btn:hover {
+  text-decoration: underline;
+}
+}

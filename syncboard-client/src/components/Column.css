@@ -1,0 +1,57 @@
+.column {
+  background: white;
+  border-radius: var(--radius);
+  padding: 16px;
+  min-width: 280px;
+  flex: 1;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.column:hover {
+  box-shadow: var(--card-hover-shadow);
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 14px;
+}
+
+.column-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.task-count {
+  background: var(--light-gray);
+  color: var(--gray);
+  padding: 2px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 60px;
+}
+
+.empty-column {
+  color: var(--gray);
+  text-align: center;
+  padding: 28px 12px;
+  font-style: italic;
+  font-size: 14px;
+  background: #fafafa;
+  border-radius: 8px;
+}

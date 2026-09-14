@@ -1,0 +1,190 @@
+.task-card {
+  background: white;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: var(--transition);
+  border: 1px solid rgba(0,0,0,0.04);
+  cursor: default;
+}
+
+.task-card:hover {
+  box-shadow: var(--card-hover-shadow);
+  transform: translateY(-3px);
+  border-color: rgba(102, 126, 234, 0.2);
+}
+
+.task-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.task-description {
+  color: var(--gray);
+  font-size: 13px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.assignee {
+  color: var(--gray);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.priority {
+  padding: 2px 12px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Button container */
+.task-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.task-actions button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  flex: 1;
+  min-width: 55px;
+}
+
+.task-actions button:hover {
+  transform: scale(1.02);
+}
+
+/* Move buttons */
+.move-btn {
+  background: var(--primary);
+  color: white;
+}
+
+.move-btn:hover {
+  background: var(--primary-dark);
+}
+
+/* Move back (red) */
+.prev-btn {
+  background: var(--danger);
+  color: white;
+}
+
+.prev-btn:hover {
+  background: #e03a4a;
+}
+
+/* Edit button */
+.edit-btn {
+  background: var(--warning);
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #e69500;
+}
+
+/* Delete button */
+.delete-btn {
+  background: var(--danger);
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #e03a4a;
+}
+
+/* ===== Edit Mode ===== */
+.task-card.editing {
+  background: #f8f9ff;
+  border: 2px solid var(--primary);
+  padding: 16px;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.edit-input {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border: 2px solid var(--light-gray);
+  border-radius: 6px;
+  font-size: 14px;
+  transition: var(--transition);
+  box-sizing: border-box;
+}
+
+.edit-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.edit-select {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border: 2px solid var(--light-gray);
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.edit-actions button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.save-btn {
+  background: var(--success);
+  color: white;
+}
+
+.save-btn:hover {
+  background: #26b85e;
+}
+
+.cancel-btn {
+  background: var(--danger);
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #e03a4a;
+}
