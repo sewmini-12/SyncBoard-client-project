@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import Login from './Login';
 
-test('renders login form with email field', () => {
+test('renders email field', () => {
   render(<Login onLogin={() => {}} />);
   expect(screen.getByPlaceholderText(/Email/i)).toBeInTheDocument();
 });
 
-test('renders login form with password field', () => {
+test('renders password field', () => {
   render(<Login onLogin={() => {}} />);
   expect(screen.getByPlaceholderText(/Password/i)).toBeInTheDocument();
 });
