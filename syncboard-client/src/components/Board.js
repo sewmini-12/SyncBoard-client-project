@@ -4,14 +4,12 @@ import { io } from 'socket.io-client';
 import Column from './Column';
 import './Board.css';
 
-// ========== ENVIRONMENT-AWARE API & SOCKET URLs ==========
 const API_URL = process.env.NODE_ENV === 'production' 
-  ? '/api'  // Relative path for Render (same domain)
+  ? 'https://syncboard-api-66.onrender.com/api'
   : 'http://localhost:5000/api';
 
-// Socket connection – use relative path in production
 const SOCKET_URL = process.env.NODE_ENV === 'production'
-  ? '/'  // Same domain for Render
+  ? 'https://syncboard-api-66.onrender.com'
   : 'http://localhost:5000';
 
 const socket = io(SOCKET_URL);

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API_URL = process.env.NODE_ENV === 'production' 
-  ? '/api/auth' 
+  ? 'https://syncboard-api-66.onrender.com/api/auth' 
   : 'http://localhost:5000/api/auth';
 
 export const register = async (name, email, password) => {
